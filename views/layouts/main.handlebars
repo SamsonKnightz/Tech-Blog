@@ -8,9 +8,20 @@
 </head>
 
 <body>
-  <main>
-    {{{body}}}
-  </main>
+  <header class="display-flex justify-space-between align-center p-2">
+    <nav>
+      {{!-- add a rendered condition login button or logout button depending on condition --}}
+      {{#if logged_in}}
+      <a href="/profile">profile</a> |
+      <button class="no-button" id="logout">logout</button>
+      {{else}}
+      <a href="/login">login</a>
+      {{/if}}
+    </nav>
+    </header>
+    <main>
+      {{{body}}}
+    </main>
 </body>
 
 </html>
